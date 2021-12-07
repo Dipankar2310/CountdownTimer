@@ -1,0 +1,110 @@
+$Grayishblue: hsl(237, 18%, 59%);
+$Softred: hsl(345, 95%, 68%);
+$White: hsl(0, 0%, 100%);
+$Darkdesaturateblue: hsl(236, 21%, 26%);
+$Verydarkblue: hsl(235, 16%, 14%);
+$Verydarkmostlblackblue: hsl(234, 17%, 12%);
+
+*{
+    margin: 0;
+    padding: 0;
+  
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 700;
+    background-color: $Verydarkblue;
+    color: $White;
+    height: 100vh;
+  
+    background-image: url(/images/pattern-hills.svg),url(/images/bg-stars.svg);
+    background-repeat: no-repeat;
+    background-position: bottom,top;
+    font-size: clamp(8px,1vw ,20px);    
+  
+}
+main{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+
+}
+
+.sec1{
+    width: Max(50%,300px);
+    display: flex;
+    margin: Max(10%,100px) auto Max(5%,50px) auto;
+    justify-content: center;
+    font-size: Max(13px,1.6vw);
+    letter-spacing: 0.5em;
+    text-align: center;
+}
+.sec2{width: Max(60%,350px);
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40vh;
+    
+div{width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 0.5em;
+    color: $Grayishblue;
+    
+    
+  
+span{
+    width: clamp(75px, 12vw, 120px);
+    height:clamp(75px, 12vw, 120px);
+    font-size: clamp(45px,6vw ,70px);
+    letter-spacing: 0;
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    background-image:linear-gradient(hsla(236, 21%, 26%,0.5) 50%,$Darkdesaturateblue 50%);
+    margin-bottom: Max(3vh, 10px);
+    color: $Softred;
+    border-radius: 5px;
+    box-shadow:0rem 0.75rem 0.5rem $Verydarkmostlblackblue;
+    position: relative;
+
+}
+p::before{
+    content:'';
+    position: absolute;
+    
+    width: 1vw;
+    height:1vw;
+    left:-0.5vw;
+    bottom: 50%;
+    border-radius: 100%;
+    background-color: $Verydarkblue;
+    transform: translate(0,+0.5vw);
+    
+}
+p::after{
+    content:'';
+    position: absolute;
+    
+    width: 1vw;
+    height: 1vw;
+    right:-0.5vw;
+    bottom: 50%;
+    border-radius: 100%;
+    background-color: $Verydarkblue;
+    transform: translate(0,+0.5vw);
+    
+}
+}
+}
+.attribution{
+    position: absolute;
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-top: 10px;
+}
